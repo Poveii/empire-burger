@@ -1,0 +1,123 @@
+/* ====== GLOBAL ====== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+}
+
+h2,
+h3,
+.offer strong,
+.opening-hours span,
+.hashtag span,
+.itens span {
+  font-family: "Lilita One", sans-serif;
+}
+
+.none {
+  display: none;
+}
+
+/* ====== HEADER ====== */
+header {
+  width: 100vw;
+  height: 64px;
+  position: absolute;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 24px;
+
+  background: rgba(59, 32, 11, 0.05);
+  backdrop-filter: blur(5px);
+}
+
+.menu .menu-icon {
+  display: flex;
+  padding: 7px;
+
+  background: rgba(29, 6, 5, 0.15);
+  border-radius: 3px;
+}
+
+.menu-icon img {
+  width: 1rem;
+  height: 1rem;
+}
+
+/* ====== MAIN ====== */
+section {
+  padding-inline: 24px;
+}
+
+#hero-section {
+  height: 856px;
+  padding-top: 102px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  background-image: url(./assets/banner-hero-mobile.png);
+  background-repeat: no-repeat;
+}
+
+#hero-section span.heading {
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 25px;
+}
+
+#hero-section h2 {
+  font-size: 53.3477px;
+  line-height: 59px;
+  text-transform: uppercase;
+}
+
+#hero-section h2 span.colored {
+  color: #f59a1b;
+}
+
+#hero-section p {
+  font-size: 1rem;
+  line-height: 22px;
+
+  color: #1d0605b0;
+}
+
+#hero-section p span.highlight {
+  font-weight: 900;
+  background-color: #f59a1b;
+  border-radius: 5px;
+  padding: 2px;
+}
+
+#hero-section a {
+  width: 152px;
+  height: 44px;
+  padding: 10px 20px;
+  margin-top: 16px;
+
+  font-weight: 700;
+  background-color: #f43127;
+  color: #ffffff;
+  border-radius: 5px;
+}
+
+/* ====== FOOTER ====== */
+footer span {
+  font-family: "Inter", sans-serif;
+}

@@ -5,22 +5,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Empire Burger</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lato:wght@400;700;900&family=Lilita+One&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Round"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
     <header>
       <img src="./assets/logo.png" alt="Logo Empire Burger" />
 
-      <nav>
-        <ul>
+      <nav class="menu">
+        <ul class="none">
           <li><a href="">Home</a></li>
           <li><a href="">Promoção</a></li>
           <li><a href="">Cardápio</a></li>
           <li><a href="">Comentário</a></li>
           <li><a href="">Contato</a></li>
         </ul>
+
+        <div class="menu-icon">
+          <img src="./assets/icons/menu.svg" alt="" />
+        </div>
       </nav>
 
-      <div class="contact">
+      <div class="contact none">
         <a href="">
           <img
             src="./assets/icons/ifood.svg"
@@ -46,35 +64,81 @@
     </header>
 
     <main>
-      <section class="hero">
-        <span>Uma nova experiência!</span>
-        <h2>King Burger</h2>
-        <p>Para quem tem um <span>Apetite de um REI!</span></p>
+      <section id="hero-section">
+        <span class="heading">Uma nova experiência!</span>
+        <h2>King <span class="colored">Burger</span></h2>
+        <p>
+          Para quem tem um <span class="highlight">Apetite de um REI!</span>
+        </p>
         <a href="">Comprar Agora</a>
       </section>
 
-      <section class="special-offers">
+      <div class="card-itens">
+        <ul>
+          <li class="itens">
+            <div class="item-icon">
+              <img src="./assets/icons/burger.svg" alt="" />
+            </div>
+            <div>
+              <span>Artesanal</span>
+              <p>Nossas receitas são feitas com todo cuidado</p>
+            </div>
+          </li>
+
+          <hr />
+
+          <li class="itens">
+            <div class="item-icon">
+              <img src="./assets/icons/headset.svg" alt="" />
+            </div>
+            <div>
+              <span>Atendimento</span>
+              <p>Totalmente personalizado</p>
+            </div>
+          </li>
+
+          <hr />
+
+          <li class="itens">
+            <div class="item-icon">
+              <img src="./assets/icons/delivery.svg" alt="" />
+            </div>
+            <div>
+              <span>Delivery Speed</span>
+              <p>Entregamos menos de 30 minutos</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <section id="offers-section">
         <h3>Ofertas Especiais</h3>
         <p>
-          Aproveite todas as nossas ofertas, fiquem de olhos abertos, porque
-          sempre estamos mudando o nosso cardápio.
+          Aproveite todas as nossas ofertas, fiquem de olho porque sempre
+          estamos mudando o nosso cardápio.
         </p>
 
         <div class="offers">
           <div class="offer">
-            <strong>Burger Imperial+Batata</strong>
-            <small>250kg</small>
+            <div>
+              <strong>Burger Imperial+Batata</strong>
+              <small>250kg</small>
+            </div>
             <p>Apenas<span>Hoje</span></p>
           </div>
 
           <div class="offer">
-            <strong>Batata</strong>
-            <small>150kg</small>
+            <div>
+              <strong>Batata</strong>
+              <small>150kg</small>
+            </div>
           </div>
 
           <div class="offer">
-            <strong>Sorvete</strong>
-            <small>50kg</small>
+            <div>
+              <strong>Sorvete</strong>
+              <small>50kg</small>
+            </div>
           </div>
         </div>
 
@@ -85,12 +149,14 @@
             <p>Sábado a Domingo: 18h00 - 23h00</p>
           </div>
 
-          <p>Não esqueça de marcar a gente no Instagram:</p>
-          <span>#empireburger</span>
+          <div class="hashtag">
+            <p>Não esqueça de marcar a gente no Instagram:</p>
+            <span>#empireburger</span>
+          </div>
         </div>
       </section>
 
-      <section class="address">
+      <section id="address-section">
         <h3>Onde fica o nosso castelo</h3>
         <p>Estaremos de portas abertas para a nossa realeza.</p>
 
