@@ -22,8 +22,10 @@ h3,
 .offer strong,
 .opening-hours span,
 .hashtag span,
-.itens span {
+.itens span,
+.offer:nth-child(1) div:nth-child(2) span {
   font-family: "Lilita One", sans-serif;
+  letter-spacing: 0.04em;
 }
 
 .none {
@@ -115,6 +117,227 @@ section {
   background-color: #f43127;
   color: #ffffff;
   border-radius: 5px;
+}
+
+.card-itens {
+  width: 356px;
+  position: absolute;
+  margin: -114px 36px 0px;
+  padding: 32px 28px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #ffffff;
+  box-shadow: 0px 4px 35px rgba(179, 155, 132, 0.3);
+  border-radius: 10px;
+}
+
+.card-itens ul {
+  width: 100%;
+}
+
+.itens {
+  display: flex;
+  margin-inline: 4px;
+}
+
+.itens .item-icon {
+  max-height: 60px;
+  padding: 14px;
+
+  display: flex;
+  margin-right: 18px;
+
+  background-color: #fae2cb;
+  border-radius: 50%;
+}
+
+.item-icon img {
+  width: 32px;
+  height: 32px;
+}
+
+.card-itens hr {
+  margin: 16px 0px;
+  border: 0.8px solid #492e1526;
+}
+
+.card-itens div {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-itens div span {
+  font-size: 1.25rem;
+  line-height: 22px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.card-itens div p {
+  width: 170px;
+  line-height: 19px;
+  color: #1d0605b0;
+  opacity: 0.6;
+}
+
+#offers-section {
+  margin-top: 280px;
+}
+
+#offers-section h3 {
+  font-size: 1.5625rem;
+  line-height: 28px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #1d0605e5;
+  margin-bottom: 8px;
+}
+
+#offers-section p.subtitle-text {
+  width: 378px;
+  line-height: 22px;
+  color: #1d0605b0;
+  margin-bottom: 16px;
+}
+
+#offers-section .offers {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  row-gap: 8px;
+}
+
+.offer {
+  width: 380px;
+  height: 213px;
+}
+
+.offer div:nth-child(1) {
+  display: grid;
+  margin-top: 14px;
+  margin-left: 20px;
+}
+
+.offer strong {
+  font-size: 20.4876px;
+  line-height: 23px;
+  text-transform: uppercase;
+  opacity: 0.9;
+}
+
+.offer small {
+  font-size: 18.4388px;
+  line-height: 26px;
+  opacity: 0.69;
+  margin-top: -2px;
+}
+
+.offer:nth-child(1) {
+  background-image: url(./assets/offers/offer-1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #ffffff;
+  position: relative;
+}
+
+.offer:nth-child(1) div:nth-child(2) {
+  display: grid;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+
+  margin-right: 14px;
+  margin-bottom: 16px;
+}
+
+.offer:nth-child(1) div:nth-child(2) p {
+  font-size: 10.912px;
+  line-height: 12px;
+  opacity: 0.69;
+  margin-bottom: 3px;
+}
+
+.offer:nth-child(1) div:nth-child(2) span {
+  font-size: 19.9263px;
+  line-height: 13px;
+  text-transform: uppercase;
+  opacity: 0.9;
+}
+
+.offer:nth-child(2) {
+  background-image: url(./assets/offers/offer-2.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.offer:nth-child(3) {
+  background-image: url(./assets/offers/offer-3.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.opening-hours {
+  background-color: #f43127;
+  display: flex;
+  align-items: center;
+  column-gap: 14px;
+  padding: 18px 14px;
+  border-radius: 10px;
+  margin-top: 38px;
+}
+
+.opening-hours .item-icon {
+  max-height: 72px;
+  padding: 15px;
+  display: flex;
+  background-color: #1d060533;
+  border-radius: 50%;
+}
+
+.opening-hours hr {
+  height: 69px;
+  border: 1px solid #1d060566;
+}
+
+.opening-hours span {
+  color: #1d0605b0;
+  font-size: 1.125rem;
+  line-height: 25px;
+  text-transform: uppercase;
+  letter-spacing: 0em;
+  margin-bottom: 4px;
+}
+
+.opening-hours p {
+  color: #ffffff;
+  font-size: 0.875rem;
+  line-height: 20px;
+  opacity: 0.85;
+}
+
+.hashtag {
+  margin-top: 64px;
+  text-align: center;
+}
+
+.hashtag p.heading {
+  font-size: 1.125rem;
+  line-height: 25px;
+}
+
+.hashtag span {
+  font-size: 41.0202px;
+  line-height: 28px;
+  text-transform: uppercase;
+  color: #f43127;
+}
+
+#address-section {
+  margin-top: 64px;
 }
 
 /* ====== FOOTER ====== */
