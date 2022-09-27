@@ -13,6 +13,10 @@ ul {
   list-style: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Lato", sans-serif;
 }
@@ -65,6 +69,7 @@ section {
   padding-inline: 24px;
 }
 
+/* ====== HERO SECTION ====== */
 #hero-section {
   height: 856px;
   padding-top: 102px;
@@ -119,6 +124,7 @@ section {
   border-radius: 5px;
 }
 
+/* ====== CARD BETWEEN ====== */
 .card-itens {
   width: 356px;
   position: absolute;
@@ -184,6 +190,7 @@ section {
   opacity: 0.6;
 }
 
+/* ====== OFFERS SECTION ====== */
 #offers-section {
   margin-top: 280px;
 }
@@ -327,6 +334,7 @@ section {
 .hashtag p.heading {
   font-size: 1.125rem;
   line-height: 25px;
+  margin-bottom: 3px;
 }
 
 .hashtag span {
@@ -336,11 +344,74 @@ section {
   color: #f43127;
 }
 
+/* ====== ADDRESS SECTION ====== */
 #address-section {
+  text-align: center;
   margin-top: 64px;
+  padding-inline: 0;
+}
+
+#address-section h3 {
+  font-size: 25px;
+  line-height: 28px;
+  text-transform: uppercase;
+  color: rgba(29, 6, 5, 0.9);
+  margin-bottom: 2px;
+}
+
+#address-section p {
+  line-height: 22px;
+  color: rgba(29, 6, 5, 0.69);
+  margin-bottom: 16px;
+}
+
+#address-section #map {
+  width: 100vw;
+  height: 208px;
 }
 
 /* ====== FOOTER ====== */
-footer span {
-  font-family: "Inter", sans-serif;
+footer {
+  text-align: center;
+  padding: 18px 24px;
+}
+
+footer hr {
+  border: 1px solid #1d060526;
+  margin: 14px 0px;
+}
+
+footer .contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 12px;
+}
+
+footer nav ul {
+  display: grid;
+  row-gap: 14px;
+}
+
+footer nav .title a {
+  font-size: 1.125rem;
+  line-height: 25px;
+  color: #3a210b;
+}
+
+footer nav .title.active {
+  font-weight: 700;
+}
+
+footer .footer-text {
+  font: 1.125rem 19px "Inter", sans-serif;
+  color: rgba(2, 14, 31);
+}
+
+footer .footer-text strong {
+  opacity: 0.69;
+}
+
+footer .footer-text span {
+  opacity: 0.3;
 }
