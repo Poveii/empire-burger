@@ -38,7 +38,7 @@ h3,
 
 /* ====== HEADER ====== */
 header {
-  width: 100vw;
+  width: 100%;
   height: 64px;
   position: absolute;
 
@@ -80,6 +80,7 @@ section {
 
   background-image: url(./assets/banner-hero-mobile.png);
   background-repeat: no-repeat;
+  background-position: top center;
 }
 
 #hero-section span.heading {
@@ -89,7 +90,7 @@ section {
 }
 
 #hero-section h2 {
-  font-size: 53.3477px;
+  font-size: 3.33423125rem;
   line-height: 59px;
   text-transform: uppercase;
 }
@@ -116,6 +117,10 @@ section {
   width: 152px;
   height: 44px;
   padding: 10px 20px;
+
+  display: grid;
+  align-items: center;
+  justify-content: center;
   margin-top: 16px;
 
   font-weight: 700;
@@ -145,15 +150,20 @@ section {
   margin-inline: 4px;
 }
 
-.itens .item-icon {
+div.item-icon {
   max-height: 60px;
   padding: 14px;
 
   display: flex;
-  margin-right: 18px;
+  align-items: center;
+  justify-content: center;
 
   background-color: #fae2cb;
   border-radius: 50%;
+}
+
+.itens .item-icon {
+  margin-right: 18px;
 }
 
 .item-icon img {
@@ -166,12 +176,12 @@ section {
   border: 0.8px solid #492e1526;
 }
 
-.card-itens div {
+.card-itens div:nth-child(2) {
   display: flex;
   flex-direction: column;
 }
 
-.card-itens div span {
+.card-itens div:nth-child(2) span {
   font-size: 1.25rem;
   line-height: 22px;
   text-transform: uppercase;
@@ -181,7 +191,7 @@ section {
   margin-bottom: 8px;
 }
 
-.card-itens div p {
+.card-itens div:nth-child(2) p {
   width: 170px;
   line-height: 19px;
 
@@ -231,14 +241,14 @@ section {
 }
 
 .offer strong {
-  font-size: 20.4876px;
+  font-size: 1.280475rem;
   line-height: 23px;
   text-transform: uppercase;
   opacity: 0.9;
 }
 
 .offer small {
-  font-size: 18.4388px;
+  font-size: 1.152425rem;
   line-height: 26px;
   opacity: 0.69;
   margin-top: -2px;
@@ -263,14 +273,14 @@ section {
 }
 
 .offer:nth-child(1) div:nth-child(2) p {
-  font-size: 10.912px;
+  font-size: 0.682rem;
   line-height: 12px;
   opacity: 0.69;
   margin-bottom: 3px;
 }
 
 .offer:nth-child(1) div:nth-child(2) span {
-  font-size: 19.9263px;
+  font-size: 1.24539375rem;
   line-height: 13px;
   text-transform: uppercase;
   opacity: 0.9;
@@ -301,11 +311,9 @@ section {
 
 .opening-hours .item-icon {
   max-height: 72px;
-  display: flex;
   padding: 15px;
 
   background-color: #1d060533;
-  border-radius: 50%;
 }
 
 .opening-hours hr {
@@ -346,7 +354,7 @@ section {
 }
 
 .hashtag span {
-  font-size: 41.0202px;
+  font-size: 2.5637625rem;
   line-height: 28px;
   text-transform: uppercase;
   color: #f43127;
@@ -360,7 +368,7 @@ section {
 }
 
 #address-section h3 {
-  font-size: 25px;
+  font-size: 1.5625rem;
   line-height: 28px;
   text-transform: uppercase;
   color: rgba(29, 6, 5, 0.9);
@@ -374,14 +382,14 @@ section {
 }
 
 #address-section #map {
-  width: 100vw;
+  width: 100%;
   height: 208px;
 }
 
 /* ====== FOOTER ====== */
 footer {
   text-align: center;
-  padding: 18px 24px;
+  padding: 16px 24px;
 }
 
 footer hr {
@@ -412,7 +420,8 @@ footer nav .title.active {
 }
 
 footer .footer-text {
-  font: 1.125rem 19px "Inter", sans-serif;
+  font: 0.875rem "Inter", sans-serif;
+  line-height: 19px;
   color: rgba(2, 14, 31);
 }
 
@@ -422,4 +431,198 @@ footer .footer-text strong {
 
 footer .footer-text span {
   opacity: 0.3;
+}
+
+/* ====== MEDIA QUERIES ====== */
+@media (max-width: 375px) {
+  img.logo {
+    width: 256px;
+  }
+
+  header {
+    padding-inline: 18px;
+  }
+
+  section {
+    padding-inline: 18px;
+  }
+
+  .card-itens {
+    width: 328px;
+    padding: 30px 24px;
+  }
+
+  .offer {
+    width: 338px;
+    height: 190px;
+  }
+
+  #offers-section p.subtitle-text {
+    width: 300px;
+  }
+
+  .hashtag p.heading {
+    width: 250px;
+    margin-bottom: 6px;
+  }
+
+  .hashtag span {
+    font-size: 2.5rem;
+  }
+
+  #address-section h3 {
+    font-size: 1.5rem;
+  }
+
+  #address-section p {
+    font-size: 0.9375rem;
+  }
+
+  footer .footer-text {
+    display: grid;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 320px) {
+  img.logo {
+    width: 228px;
+  }
+
+  header {
+    height: 56px;
+  }
+
+  section {
+    padding-inline: 16px;
+  }
+
+  #hero-section {
+    padding-top: 94px;
+    background-position: top right;
+  }
+
+  #hero-section span.heading {
+    font-size: 1rem;
+  }
+
+  #hero-section h2 {
+    font-size: 3.125rem;
+    line-height: 55px;
+  }
+
+  #hero-section p {
+    font-size: 0.9375rem;
+  }
+
+  #hero-section a {
+    font-size: 0.9375rem;
+  }
+
+  .card-itens {
+    width: 280px;
+    padding: 24px 18px;
+    margin-top: -96px;
+  }
+
+  .card-itens div:nth-child(2) span {
+    font-size: 1rem;
+    margin-bottom: 0px;
+  }
+
+  .card-itens div:nth-child(2) p {
+    font-size: 0.875rem;
+  }
+
+  .itens .item-icon {
+    height: 54px;
+    padding: 12px;
+    margin-right: 16px;
+  }
+
+  .item-icon img {
+    width: 30px;
+    height: 30px;
+  }
+
+  #offers-section h3 {
+    font-size: 1.5rem;
+  }
+
+  #offers-section p.subtitle-text {
+    font-size: 0.9375rem;
+    width: 280px;
+  }
+
+  .offer {
+    width: 287px;
+    height: 162px;
+  }
+
+  .offer strong {
+    font-size: 1.125rem;
+    line-height: 20px;
+  }
+
+  .offer small {
+    font-size: 1.0625rem;
+  }
+
+  .offer div:nth-child(1) {
+    margin-top: 14px;
+    margin-left: 16px;
+  }
+
+  .offer:nth-child(1) div:nth-child(2) {
+    margin-right: 12px;
+    margin-bottom: 14px;
+  }
+
+  .offer:nth-child(1) div:nth-child(2) p {
+    font-size: 0.625rem;
+  }
+
+  .offer:nth-child(1) div:nth-child(2) span {
+    font-size: 1.1875rem;
+  }
+
+  .opening-hours span {
+    font-size: 1rem;
+    line-height: 22px;
+  }
+
+  .opening-hours p {
+    font-size: 0.8125rem;
+    line-height: 18px;
+  }
+
+  .hashtag p.heading {
+    width: 220px;
+    font-size: 1rem;
+  }
+
+  .hashtag span {
+    font-size: 2.25rem;
+  }
+
+  #address-section h3 {
+    width: 200px;
+    font-size: 1.375rem;
+    margin-inline: auto;
+  }
+
+  #address-section p {
+    width: 210px;
+    font-size: 0.875rem;
+    margin-inline: auto;
+  }
+
+  footer nav .title a {
+    font-size: 1rem;
+  }
+
+  footer .footer-text {
+    font-size: 0.8125rem;
+    line-height: 17px;
+  }
 }
