@@ -25,7 +25,7 @@
       <img src="./assets/logo.svg" alt="Logo Empire Burger" class="logo" />
 
       <nav class="menu">
-        <ul class="none">
+        <ul class="">
           <li><a href="">Home</a></li>
           <li><a href="">Promoção</a></li>
           <li><a href="">Cardápio</a></li>
@@ -38,7 +38,7 @@
         </div>
       </nav>
 
-      <div class="contact none">
+      <div class="contact">
         <a href="">
           <img
             src="./assets/icons/ifood.svg"
@@ -74,44 +74,42 @@
       </section>
 
       <div class="card-itens">
-        <ul>
-          <li class="itens">
-            <div class="item-icon">
-              <img src="./assets/icons/burger.svg" alt="" />
-            </div>
+        <div class="itens">
+          <div class="item-icon">
+            <img src="./assets/icons/burger.svg" alt="" />
+          </div>
 
-            <div>
-              <span>Artesanal</span>
-              <p>Nossas receitas são feitas com todo cuidado</p>
-            </div>
-          </li>
+          <div>
+            <span>Artesanal</span>
+            <p>Nossas receitas são feitas com todo cuidado</p>
+          </div>
+        </div>
 
-          <hr />
+        <hr />
 
-          <li class="itens">
-            <div class="item-icon">
-              <img src="./assets/icons/headset.svg" alt="" />
-            </div>
+        <div class="itens">
+          <div class="item-icon">
+            <img src="./assets/icons/headset.svg" alt="" />
+          </div>
 
-            <div>
-              <span>Atendimento</span>
-              <p>Totalmente personalizado</p>
-            </div>
-          </li>
+          <div>
+            <span>Atendimento</span>
+            <p>Totalmente personalizado</p>
+          </div>
+        </div>
 
-          <hr />
+        <hr />
 
-          <li class="itens">
-            <div class="item-icon">
-              <img src="./assets/icons/delivery.svg" alt="" />
-            </div>
+        <div class="itens">
+          <div class="item-icon">
+            <img src="./assets/icons/delivery.svg" alt="" />
+          </div>
 
-            <div>
-              <span>Delivery Speed</span>
-              <p>Entregamos menos de 30 minutos</p>
-            </div>
-          </li>
-        </ul>
+          <div>
+            <span>Delivery Speed</span>
+            <p>Entregamos menos de 30 minutos</p>
+          </div>
+        </div>
       </div>
 
       <section id="offers-section">
@@ -149,23 +147,25 @@
           </div>
         </div>
 
-        <div class="opening-hours">
-          <div class="item-icon">
-            <img src="./assets/icons/timer.svg" alt="" />
+        <div class="content">
+          <div class="opening-hours">
+            <div class="item-icon">
+              <img src="./assets/icons/timer.svg" alt="" />
+            </div>
+
+            <hr />
+
+            <div>
+              <span>Horário de Funcionamento</span>
+              <p>Segunda à sexta: 17h00 - 23h00</p>
+              <p>Sábado a Domingo: 18h00 - 23h00</p>
+            </div>
           </div>
 
-          <hr />
-
-          <div>
-            <span>Horário de Funcionamento</span>
-            <p>Segunda à sexta: 17h00 - 23h00</p>
-            <p>Sábado a Domingo: 18h00 - 23h00</p>
+          <div class="hashtag">
+            <p class="heading">Não esqueça de marcar a gente no Instagram:</p>
+            <span>#empireburger</span>
           </div>
-        </div>
-
-        <div class="hashtag">
-          <p class="heading">Não esqueça de marcar a gente no Instagram:</p>
-          <span>#empireburger</span>
         </div>
       </section>
 
@@ -183,42 +183,46 @@
     </main>
 
     <footer>
-      <img
-        src="./assets/logo-colorized.svg"
-        alt="Logo Empire Burger Colorida"
-        class="logo"
-      />
+      <div class="container">
+        <img
+          src="./assets/logo-colorized.svg"
+          alt="Logo Empire Burger Colorida"
+          class="logo"
+        />
 
-      <hr />
+        <div class="line"></div>
 
-      <div class="contact">
-        <a href="">
-          <img
-            src="./assets/icons/ifood.svg"
-            alt="Ícone do IFood de cor marrom"
-          />
-        </a>
+        <div class="content">
+          <div class="contact">
+            <a href="">
+              <img
+                src="./assets/icons/ifood.svg"
+                alt="Ícone do IFood de cor marrom"
+              />
+            </a>
 
-        <a href="">
-          <img
-            src="./assets/icons/instagram.svg"
-            alt="Ícone do Instagram de cor marrom"
-          />
-        </a>
+            <a href="">
+              <img
+                src="./assets/icons/instagram.svg"
+                alt="Ícone do Instagram de cor marrom"
+              />
+            </a>
+          </div>
+
+          <div class="line"></div>
+
+          <nav>
+            <ul>
+              <li class="title active"><a href="">Home</a></li>
+              <li class="title"><a href="">Localização</a></li>
+              <li class="title"><a href="">Cardápio</a></li>
+              <li class="title"><a href="">Sobre</a></li>
+            </ul>
+          </nav>
+        </div>
       </div>
 
-      <hr />
-
-      <nav>
-        <ul>
-          <li class="title active"><a href="">Home</a></li>
-          <li class="title"><a href="">Localização</a></li>
-          <li class="title"><a href="">Cardápio</a></li>
-          <li class="title"><a href="">Sobre</a></li>
-        </ul>
-      </nav>
-
-      <hr />
+      <div class="line last"></div>
 
       <div class="footer-text">
         <strong>2022 © EmpireBurger.</strong>
