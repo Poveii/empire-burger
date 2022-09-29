@@ -20,17 +20,18 @@
 
     <link rel="stylesheet" href="./style.css" />
   </head>
+
   <body>
     <header>
       <img src="./assets/logo.svg" alt="Logo Empire Burger" class="logo" />
 
       <nav class="menu">
         <ul class="">
-          <li><a href="">Home</a></li>
-          <li><a href="">Promoção</a></li>
-          <li><a href="">Cardápio</a></li>
-          <li><a href="">Comentário</a></li>
-          <li><a href="">Contato</a></li>
+          <li class="title active"><a href="">Home</a></li>
+          <li class="title"><a href="">Promoção</a></li>
+          <li class="title"><a href="">Cardápio</a></li>
+          <li class="title"><a href="">Comentário</a></li>
+          <li class="title"><a href="">Contato</a></li>
         </ul>
 
         <div class="menu-icon">
@@ -43,6 +44,7 @@
           <img
             src="./assets/icons/ifood.svg"
             alt="Ícone do IFood de cor marrom"
+            class="white-color"
           />
         </a>
 
@@ -50,15 +52,18 @@
           <img
             src="./assets/icons/instagram.svg"
             alt="Ícone do Instagram de cor marrom"
+            class="white-color"
           />
         </a>
 
-        <a href="">
+        <hr />
+
+        <a href="" id="contactButton">
           <img
             src="./assets/icons/whatsapp.svg"
             alt="Ícone do WhatsApp de cor marrom"
           />
-          Contato
+          <span>Contato</span>
         </a>
       </div>
     </header>
@@ -79,7 +84,7 @@
             <img src="./assets/icons/burger.svg" alt="" />
           </div>
 
-          <div>
+          <div class="content">
             <span>Artesanal</span>
             <p>Nossas receitas são feitas com todo cuidado</p>
           </div>
@@ -87,12 +92,12 @@
 
         <hr />
 
-        <div class="itens">
+        <div class="itens second">
           <div class="item-icon">
             <img src="./assets/icons/headset.svg" alt="" />
           </div>
 
-          <div>
+          <div class="content">
             <span>Atendimento</span>
             <p>Totalmente personalizado</p>
           </div>
@@ -105,7 +110,7 @@
             <img src="./assets/icons/delivery.svg" alt="" />
           </div>
 
-          <div>
+          <div class="content">
             <span>Delivery Speed</span>
             <p>Entregamos menos de 30 minutos</p>
           </div>
@@ -121,33 +126,33 @@
 
         <div class="offers">
           <div class="offer">
-            <div>
+            <div class="content">
               <strong>Burger Prime+Batata</strong>
               <small>250kg</small>
             </div>
 
-            <div>
+            <div class="text">
               <p>Apenas</p>
               <span>Hoje</span>
             </div>
           </div>
 
           <div class="offer">
-            <div>
+            <div class="content">
               <strong>Batata</strong>
               <small>150kg</small>
             </div>
           </div>
 
           <div class="offer">
-            <div>
+            <div class="content">
               <strong>Sorvete</strong>
               <small>50kg</small>
             </div>
           </div>
         </div>
 
-        <div class="content">
+        <div class="container">
           <div class="opening-hours">
             <div class="item-icon">
               <img src="./assets/icons/timer.svg" alt="" />
@@ -155,10 +160,10 @@
 
             <hr />
 
-            <div>
-              <span>Horário de Funcionamento</span>
-              <p>Segunda à sexta: 17h00 - 23h00</p>
-              <p>Sábado a Domingo: 18h00 - 23h00</p>
+            <div class="content">
+              <span class="heading">Horário de Funcionamento</span>
+              <p>Segunda à sexta: <span>17h00 - 23h00</span></p>
+              <p>Sábado a Domingo: <span>18h00 - 23h00</span></p>
             </div>
           </div>
 
@@ -174,10 +179,11 @@
         <p>Estaremos de portas abertas para a nossa realeza.</p>
 
         <iframe
-          id="map"
           src="https://maps.google.com/maps?q=S%C3%A3o%20Paulo&t=&z=13&ie=UTF8&iwloc=&output=embed&hl=pt-BR"
           frameborder="0"
           scrolling="no"
+          title="Mapa mostrando a localização fictícia do Empire Burger"
+          id="map"
         ></iframe>
       </section>
     </main>
@@ -190,21 +196,21 @@
           class="logo"
         />
 
-        <div class="line"></div>
-
         <div class="content">
+          <div class="line"></div>
+
           <div class="contact">
             <a href="">
               <img
                 src="./assets/icons/ifood.svg"
-                alt="Ícone do IFood de cor marrom"
+                alt="Ícone do IFood de cor amarela"
               />
             </a>
 
             <a href="">
               <img
                 src="./assets/icons/instagram.svg"
-                alt="Ícone do Instagram de cor marrom"
+                alt="Ícone do Instagram de cor amarela"
               />
             </a>
           </div>

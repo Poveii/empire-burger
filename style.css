@@ -2,6 +2,7 @@
 * {
   margin: 0;
   padding: 0;
+  border: 0;
   box-sizing: border-box;
 }
 
@@ -17,6 +18,11 @@ html {
   scroll-behavior: smooth;
 }
 
+:root {
+  --yellow-color: #f59a1b;
+  --red-color: #f43127;
+}
+
 body {
   font-family: "Lato", sans-serif;
 }
@@ -24,21 +30,36 @@ body {
 h2,
 h3,
 .offer strong,
-.opening-hours span,
+.opening-hours span.heading,
 .hashtag span,
 .itens span,
-.offer:nth-child(1) div:nth-child(2) span {
+.offer:nth-child(1) .text span {
   font-family: "Lilita One", sans-serif;
+  text-transform: uppercase;
   letter-spacing: 0.04em;
 }
 
-.none {
-  display: none;
+header,
+section {
+  padding-inline: 24px;
 }
 
-.line {
-  border: 1px solid #1d060526;
-  margin: 14px 0px;
+div.item-icon {
+  width: 60px;
+  height: 60px;
+  padding: 14px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #fae2cb;
+  border-radius: 100%;
+}
+
+div.item-icon img {
+  width: 32px;
+  height: 32px;
 }
 
 /* ====== HEADER ====== */
@@ -50,9 +71,8 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-inline: 24px;
 
-  background: rgba(59, 32, 11, 0.05);
+  background-color: rgba(59, 32, 11, 0.05);
   backdrop-filter: blur(5px);
 }
 
@@ -77,67 +97,63 @@ header .contact {
   display: none;
 }
 
-/* ====== MAIN ====== */
-section {
-  padding-inline: 24px;
-}
-
+/* ========= MAIN ========= */
 /* ====== HERO SECTION ====== */
 #hero-section {
   height: 856px;
   padding-top: 102px;
 
-  display: flex;
+  /* display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: flex-start; */
 
-  background-image: url(./assets/banner-hero-mobile.png);
-  background-repeat: no-repeat;
-  background-position: top center;
+  background: url(./assets/banner-hero-mobile.png) no-repeat;
 }
 
 #hero-section span.heading {
   font-size: 1.125rem;
   font-weight: 700;
-  line-height: 25px;
+  line-height: 1.5625rem;
+  color: rgba(29, 6, 5, 0.9);
 }
 
 #hero-section h2 {
   font-size: 3.33423125rem;
-  line-height: 59px;
-  text-transform: uppercase;
+  line-height: 3.6875rem;
+  color: #3b200b;
 }
 
 #hero-section h2 span.colored {
-  color: #f59a1b;
+  color: var(--yellow-color);
 }
 
 #hero-section p {
   font-size: 1rem;
-  line-height: 22px;
+  line-height: 1.375rem;
 
-  color: #1d0605b0;
+  color: rgba(29, 6, 5, 0.69);
 }
 
 #hero-section p span.highlight {
   font-weight: 900;
-  background-color: #f59a1b;
-  border-radius: 5px;
   padding: 2px;
+
+  background-color: var(--yellow-color);
+  border-radius: 5px;
 }
 
 #hero-section a {
   width: 152px;
   height: 44px;
-  padding: 10px 20px;
+  /* padding: 10px 20px; */
 
-  display: grid;
+  display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 16px;
 
   font-weight: 700;
-  background-color: #f43127;
+  background-color: var(--red-color);
   color: #ffffff;
   border-radius: 5px;
 }
@@ -147,92 +163,80 @@ section {
   width: 356px;
   margin-top: -114px;
   margin-inline: auto;
-  padding: 32px 28px;
+  padding: 26px 32px;
 
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
 
   background-color: #ffffff;
-  box-shadow: 0px 4px 35px rgba(179, 155, 132, 0.3);
+  box-shadow: 0px 4px 40px 0px rgba(178, 155, 132, 0.502);
   border-radius: 10px;
 }
 
 .itens {
   display: flex;
-  margin-inline: 4px;
-}
-
-div.item-icon {
-  max-height: 60px;
-  padding: 14px;
-
-  display: flex;
   align-items: center;
-  justify-content: center;
-
-  background-color: #fae2cb;
-  border-radius: 50%;
+  margin-left: 4px;
 }
 
 .itens .item-icon {
   margin-right: 18px;
 }
 
-.item-icon img {
-  width: 32px;
-  height: 32px;
+.second .item-icon img {
+  width: 34px;
+  height: 34px;
 }
 
 .card-itens hr {
-  width: 292px;
-  border: 0.8px solid #492e1526;
+  width: 100%;
   margin: 16px 0px;
+
+  border-top: 1px solid rgba(73, 46, 21, 0.149);
 }
 
-.card-itens div:nth-child(2) {
+.card-itens .content {
   display: flex;
   flex-direction: column;
 }
 
-.card-itens div:nth-child(2) span {
+.card-itens .content span {
   font-size: 1.25rem;
-  line-height: 22px;
-  text-transform: uppercase;
+  line-height: 1.375rem;
+  letter-spacing: 0em;
 
   color: rgba(29, 6, 5, 0.9);
   opacity: 0.8;
   margin-bottom: 8px;
 }
 
-.card-itens div:nth-child(2) p {
+.card-itens .content p {
   width: 170px;
-  line-height: 19px;
+  line-height: 1.1875rem;
 
-  color: #1d0605b0;
+  color: rgba(29, 6, 5, 0.69);
   opacity: 0.6;
 }
 
 /* ====== OFFERS SECTION ====== */
 #offers-section {
+  color: #1d0605;
   margin-top: 64px;
 }
 
 #offers-section h3 {
   font-size: 1.5625rem;
-  line-height: 28px;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
+  line-height: 1.75rem;
 
-  color: #1d0605e5;
+  opacity: 0.898;
   margin-bottom: 8px;
 }
 
 #offers-section p.subtitle-text {
   width: 378px;
-  line-height: 22px;
-  color: #1d0605b0;
+  line-height: 1.375rem;
+
+  opacity: 0.69;
   margin-bottom: 16px;
 }
 
@@ -240,77 +244,78 @@ div.item-icon {
   display: grid;
   align-items: center;
   justify-content: center;
-  row-gap: 8px;
+  gap: 8px;
 }
 
 .offer {
   width: 381px;
   height: 214px;
+
+  background-repeat: no-repeat;
+  background-size: cover;
   border-radius: 10px;
 }
 
-.offer div:nth-child(1) {
+.offer .content {
   display: grid;
-  margin-top: 14px;
-  margin-left: 20px;
+  margin: 14px 0px 0px 20px;
 }
 
 .offer strong {
   font-size: 1.280475rem;
-  line-height: 23px;
-  text-transform: uppercase;
+  line-height: 1.4375rem;
   opacity: 0.9;
 }
 
 .offer small {
   font-size: 1.152425rem;
-  line-height: 26px;
+  line-height: 1.625rem;
   opacity: 0.69;
   margin-top: -2px;
 }
 
 .offer:nth-child(1) {
   background-image: url(./assets/offers/offer-1.png);
-  background-repeat: no-repeat;
-  background-size: cover;
   color: #ffffff;
   position: relative;
 }
 
-.offer:nth-child(1) div:nth-child(2) {
+.offer:nth-child(1) .text {
   display: grid;
   position: absolute;
-  right: 0;
-  bottom: 0;
-
-  margin-right: 14px;
-  margin-bottom: 16px;
+  right: 14px;
+  bottom: 16px;
 }
 
-.offer:nth-child(1) div:nth-child(2) p {
+.offer:nth-child(1) .text p {
   font-size: 0.682rem;
-  line-height: 12px;
+  line-height: 0.75rem;
   opacity: 0.69;
   margin-bottom: 3px;
 }
 
-.offer:nth-child(1) div:nth-child(2) span {
+.offer:nth-child(1) .text span {
   font-size: 1.24539375rem;
-  line-height: 13px;
-  text-transform: uppercase;
+  line-height: 0.8125rem;
+  letter-spacing: 0em;
   opacity: 0.9;
 }
 
 .offer:nth-child(2) {
   background-image: url(./assets/offers/offer-2.png);
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .offer:nth-child(3) {
   background-image: url(./assets/offers/offer-3.png);
-  background-repeat: no-repeat;
-  background-size: cover;
+}
+
+#offers-section .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 64px;
+  margin-top: 38px;
 }
 
 .opening-hours {
@@ -318,81 +323,86 @@ div.item-icon {
   align-items: center;
   column-gap: 14px;
   padding: 18px 14px;
-  margin-top: 38px;
 
-  background-color: #f43127;
+  background-color: var(--red-color);
   border-radius: 10px;
 }
 
 .opening-hours .item-icon {
-  max-height: 72px;
+  width: 72px;
+  height: 72px;
   padding: 15px;
 
-  background-color: #1d060533;
+  background-color: rgba(29, 6, 5, 0.2);
+}
+
+.opening-hours .item-icon img {
+  width: 44px;
+  height: 44px;
 }
 
 .opening-hours hr {
   height: 69px;
-  border: 1px solid #1d060566;
+  border-left: 1px solid rgba(29, 6, 5, 0.4);
 }
 
-.opening-hours span {
-  font-size: 1.125rem;
-  line-height: 25px;
-  letter-spacing: 0em;
-  text-transform: uppercase;
+.opening-hours .content {
+  display: grid;
+}
 
-  color: #1d0605b0;
+.opening-hours span.heading {
+  font-size: 1.125rem;
+  line-height: 1.5625rem;
+  letter-spacing: 0em;
+
+  color: rgba(29, 6, 5, 0.69);
   margin-bottom: 4px;
 }
 
 .opening-hours p {
-  color: #ffffff;
   font-size: 0.875rem;
-  line-height: 20px;
-  opacity: 0.85;
+  line-height: 1.25rem;
+  color: rgba(255, 255, 255, 0.85);
 }
 
 .hashtag {
   display: grid;
   justify-items: center;
-  justify-content: center;
-
-  margin-top: 64px;
-  text-align: center;
 }
 
 .hashtag p.heading {
   font-size: 1.125rem;
-  line-height: 25px;
+  line-height: 1.5625rem;
+  text-align: center;
+
+  color: rgba(29, 6, 5, 0.69);
   margin-bottom: 3px;
 }
 
 .hashtag span {
   font-size: 2.5637625rem;
-  line-height: 28px;
-  text-transform: uppercase;
-  color: #f43127;
+  line-height: 1.75rem;
+  color: var(--red-color);
 }
 
 /* ====== ADDRESS SECTION ====== */
 #address-section {
   text-align: center;
+  padding-inline: 0px;
   margin-top: 64px;
-  padding-inline: 0;
+  color: #1d0605;
 }
 
 #address-section h3 {
   font-size: 1.5625rem;
-  line-height: 28px;
-  text-transform: uppercase;
-  color: rgba(29, 6, 5, 0.9);
+  line-height: 1.75rem;
+  opacity: 0.9;
   margin-bottom: 2px;
 }
 
 #address-section p {
-  line-height: 22px;
-  color: rgba(29, 6, 5, 0.69);
+  line-height: 1.375rem;
+  opacity: 0.69;
   margin-bottom: 16px;
 }
 
@@ -404,14 +414,12 @@ div.item-icon {
 /* ====== FOOTER ====== */
 footer {
   display: grid;
-  align-items: center;
-  justify-content: center;
   padding: 16px 24px;
   text-align: center;
 }
 
 footer .line {
-  border: 1px solid #1d060526;
+  border-top: 1px solid rgba(29, 6, 5, 0.149);
   margin: 14px 0px;
 }
 
@@ -419,18 +427,18 @@ footer .contact {
   display: flex;
   align-items: center;
   justify-content: center;
-  column-gap: 12px;
+  gap: 12px;
 }
 
 footer nav ul {
   display: flex;
   flex-direction: column;
-  row-gap: 14px;
+  gap: 14px;
 }
 
 footer nav .title a {
   font-size: 1.125rem;
-  line-height: 25px;
+  line-height: 1.5625rem;
   color: #3a210b;
 }
 
@@ -440,8 +448,8 @@ footer nav .title.active {
 
 footer .footer-text {
   font: 0.875rem "Inter", sans-serif;
-  line-height: 19px;
-  color: rgba(2, 14, 31);
+  line-height: 1.1875rem;
+  color: #020e1f;
 }
 
 footer .footer-text strong {
@@ -454,21 +462,22 @@ footer .footer-text span {
 
 /* ====== MEDIA QUERIES ====== */
 @media (max-width: 375px) {
-  img.logo {
-    width: 256px;
-  }
-
-  header {
-    padding-inline: 18px;
-  }
-
+  header,
   section {
     padding-inline: 18px;
   }
 
+  img.logo {
+    width: 256px;
+  }
+
+  #hero-section {
+    background-position: top right;
+  }
+
   .card-itens {
-    width: 328px;
-    padding: 30px 24px;
+    width: 314px;
+    padding: 24px 30px;
   }
 
   .offer {
@@ -478,6 +487,10 @@ footer .footer-text span {
 
   #offers-section p.subtitle-text {
     width: 300px;
+  }
+
+  #offers-section .container {
+    flex-direction: column;
   }
 
   .hashtag p.heading {
@@ -504,6 +517,11 @@ footer .footer-text span {
 }
 
 @media (max-width: 320px) {
+  header,
+  section {
+    padding-inline: 16px;
+  }
+
   img.logo {
     width: 228px;
   }
@@ -512,65 +530,77 @@ footer .footer-text span {
     height: 56px;
   }
 
-  section {
-    padding-inline: 16px;
-  }
-
   #hero-section {
     padding-top: 94px;
-    background-position: top right;
   }
 
   #hero-section span.heading {
     font-size: 1rem;
+    line-height: 1.4375rem;
   }
 
   #hero-section h2 {
     font-size: 3.125rem;
-    line-height: 55px;
+    line-height: 3.4375rem;
   }
 
   #hero-section p {
-    font-size: 0.9375rem;
+    line-height: 1.3125rem;
   }
 
+  #hero-section p,
   #hero-section a {
     font-size: 0.9375rem;
   }
 
   .card-itens {
-    width: 280px;
-    padding: 24px 18px;
-    margin-top: -96px;
+    width: 264px;
+    padding: 18px 24px;
+    margin-top: -92px;
   }
 
-  .card-itens div:nth-child(2) span {
+  .card-itens .content span {
     font-size: 1rem;
+    line-height: 1.125rem;
     margin-bottom: 0px;
   }
 
-  .card-itens div:nth-child(2) p {
+  .card-itens .content p {
+    width: 150px;
     font-size: 0.875rem;
+    line-height: 1.0625rem;
   }
 
   .itens .item-icon {
+    width: 54px;
     height: 54px;
     padding: 12px;
     margin-right: 16px;
   }
 
-  .item-icon img {
+  .itens .item-icon img {
     width: 30px;
     height: 30px;
   }
 
+  .itens.second .item-icon img {
+    width: 32px;
+    height: 32px;
+  }
+
+  #offers-section {
+    margin-top: 56px;
+  }
+
   #offers-section h3 {
     font-size: 1.5rem;
+    line-height: 1.6875rem;
   }
 
   #offers-section p.subtitle-text {
-    font-size: 0.9375rem;
     width: 280px;
+    font-size: 0.9375rem;
+    line-height: 1.3125rem;
   }
 
   .offer {
@@ -580,81 +610,118 @@ footer .footer-text span {
 
   .offer strong {
     font-size: 1.125rem;
-    line-height: 20px;
+    line-height: 1.25rem;
   }
 
   .offer small {
     font-size: 1.0625rem;
+    line-height: 1.5625rem;
   }
 
-  .offer div:nth-child(1) {
+  .offer .content {
     margin-top: 14px;
     margin-left: 16px;
   }
 
-  .offer:nth-child(1) div:nth-child(2) {
-    margin-right: 12px;
-    margin-bottom: 14px;
+  .offer:nth-child(1) .text {
+    right: 12px;
+    bottom: 14px;
   }
 
-  .offer:nth-child(1) div:nth-child(2) p {
+  .offer:nth-child(1) .text p {
     font-size: 0.625rem;
+    line-height: 0.693rem;
   }
 
-  .offer:nth-child(1) div:nth-child(2) span {
+  .offer:nth-child(1) .text span {
     font-size: 1.1875rem;
+    line-height: 0.75460625rem;
   }
 
-  .opening-hours span {
+  .opening-hours .item-icon {
+    width: 68px;
+    height: 68px;
+  }
+
+  .opening-hours .item-icon img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .opening-hours hr {
+    height: 89px;
+  }
+
+  .opening-hours span.heading {
     font-size: 1rem;
-    line-height: 22px;
+    line-height: 1.375rem;
   }
 
   .opening-hours p {
     font-size: 0.8125rem;
-    line-height: 18px;
+    line-height: 1.125rem;
   }
 
   .hashtag p.heading {
     width: 220px;
     font-size: 1rem;
+    line-height: 1.4375rem;
   }
 
   .hashtag span {
-    font-size: 2.25rem;
+    font-size: 2.1875rem;
+    line-height: 1.375rem;
+  }
+
+  #address-section h3,
+  #address-section p {
+    margin-inline: auto;
   }
 
   #address-section h3 {
     width: 200px;
     font-size: 1.375rem;
-    margin-inline: auto;
+    line-height: 1.5625rem;
   }
 
   #address-section p {
     width: 210px;
     font-size: 0.875rem;
-    margin-inline: auto;
+    line-height: 1.25rem;
   }
 
   footer nav .title a {
     font-size: 1rem;
+    line-height: 1.4375rem;
   }
 
   footer .footer-text {
     font-size: 0.8125rem;
-    line-height: 17px;
+    line-height: 1.125rem;
   }
 }
 
-@media (min-width: 1920px) {
+@media (min-width: 1440px) {
   header {
-    justify-content: center;
-    padding-inline: 0px;
+    padding-inline: 234px;
   }
 
   .menu ul {
     display: flex;
-    row-gap: 2rem;
+    column-gap: 1rem;
+  }
+
+  .menu ul .title a {
+    font-size: 18px;
+    line-height: 25px;
+
+    color: #635352;
+  }
+
+  .menu ul .title.active a {
+    font-weight: 700;
+
+    color: #34201f;
   }
 
   .menu .menu-icon {
@@ -662,11 +729,44 @@ footer .footer-text span {
   }
 
   header .contact {
-    display: block;
+    display: flex;
+    column-gap: 13px;
   }
 
-  section {
-    padding-inline: 376px;
+  .contact a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .contact img.white-color {
+    filter: brightness(100);
+  }
+
+  .contact hr {
+    border: 1px solid #b50b04;
+  }
+
+  .contact #contactButton {
+    column-gap: 8px;
+    padding: 4px 16px;
+
+    background-color: var(--yellow-color);
+    color: #34201f;
+    border-radius: 4px;
+  }
+
+  #contactButton img {
+    width: 24px;
+    height: 24px;
+  }
+
+  #contactButton span {
+    width: 59px;
+    height: 26px;
+
+    font-weight: 700;
+    line-height: 25px;
   }
 
   #hero-section {
@@ -675,6 +775,156 @@ footer .footer-text span {
 
     justify-content: center;
     padding-top: 0px;
+  }
+
+  section {
+    padding-inline: 234px;
+  }
+
+  .card-itens {
+    width: 878px;
+    padding: 6px 8px;
+    margin-top: -51px;
+
+    flex-direction: row;
+  }
+
+  .card-itens hr {
+    width: 1px;
+    height: 84px;
+  }
+
+  #offers-section h3 {
+    margin-bottom: 2px;
+  }
+
+  #offers-section .offers {
+    grid-auto-flow: column;
+    gap: 20px;
+  }
+
+  .offer {
+    width: 303px;
+    height: 171px;
+  }
+
+  .offer:nth-child(1) {
+    width: 645px;
+    height: 364px;
+    grid-row: 1 / 3;
+  }
+
+  #offers-section p.subtitle-text {
+    width: max-content;
+  }
+
+  .container .opening-hours {
+    width: 380px;
+  }
+
+  .hashtag p.heading {
+    margin-bottom: 8px;
+  }
+
+  footer .container {
+    display: flex;
+    column-gap: 336px;
+    justify-content: space-around;
+  }
+
+  footer .container .line,
+  footer .content .line {
+    display: none;
+  }
+
+  footer .content {
+    display: flex;
+    flex-direction: row-reverse;
+    column-gap: 150px;
+  }
+
+  footer nav ul {
+    flex-direction: row;
+    column-gap: 32px;
+  }
+}
+
+@media (min-width: 1920px) {
+  header {
+    padding-inline: 375px;
+  }
+
+  header .logo {
+    margin-right: 62px;
+  }
+
+  .menu ul {
+    display: flex;
+    column-gap: 1rem;
+  }
+
+  .menu ul .title a {
+    font-size: 18px;
+    line-height: 25px;
+
+    color: #635352;
+  }
+
+  .menu ul .title.active a {
+    font-weight: 700;
+
+    color: #34201f;
+  }
+
+  .menu .menu-icon {
+    display: none;
+  }
+
+  header .contact {
+    display: flex;
+    column-gap: 13px;
+
+    margin-left: 100px;
+  }
+
+  .contact a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .contact img.white-color {
+    filter: brightness(100);
+  }
+
+  .contact hr {
+    border: 1px solid #b50b04;
+  }
+
+  .contact #contactButton {
+    column-gap: 8px;
+    padding: 4px 16px;
+
+    background-color: var(--yellow-color);
+    color: #34201f;
+    border-radius: 4px;
+  }
+
+  #contactButton img {
+    width: 24px;
+    height: 24px;
+  }
+
+  #contactButton span {
+    width: 59px;
+    height: 26px;
+
+    font-weight: 700;
+    line-height: 25px;
+  }
+
+  section {
+    padding-inline: 376px;
   }
 
   .card-itens {
@@ -710,15 +960,47 @@ footer .footer-text span {
     width: max-content;
   }
 
-  #offers-section .content {
-    display: flex;
-    align-items: flex-start;
-    justify-content: left;
-    column-gap: 30px;
+  .container .opening-hours {
+    width: 570px;
+    padding: 18px 22px;
   }
 
-  .content .opening-hours {
-    width: 570px;
+  .opening-hours .item-icon {
+    max-height: 95px;
+  }
+
+  .opening-hours .item-icon img {
+    width: 56px;
+    height: 56px;
+  }
+
+  .opening-hours span.heading {
+    font-size: 1.5625rem;
+    line-height: 28px;
+  }
+
+  .opening-hours p {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 22px;
+  }
+
+  .opening-hours p span {
+    font-size: 1rem;
+    font-weight: 900;
+  }
+
+  .hashtag {
+    align-items: flex-start;
+  }
+
+  .hashtag span {
+    font-size: 1.7512625rem;
+    line-height: 28px;
+  }
+
+  .hashtag p.heading {
+    color: rgba(29, 6, 5, 0.69);
   }
 
   footer .container {
