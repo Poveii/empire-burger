@@ -12,7 +12,6 @@ header {
 
   background-color: rgba(59, 32, 11, 0.05);
   backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
 }
 
 .menu ul {
@@ -137,7 +136,6 @@ header .contact {
 }
 
 .second .item-icon img {
-  width: 34px;
   height: 34px;
 }
 
@@ -191,6 +189,12 @@ header .contact {
 
   opacity: 0.69;
   margin-bottom: 16px;
+}
+
+#offers-section .box {
+  display: grid;
+  align-items: center;
+  justify-content: center;
 }
 
 #offers-section .offers {
@@ -386,7 +390,7 @@ footer .contact {
 footer nav ul {
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 0.875rem;
 }
 
 footer nav .title a {
@@ -440,10 +444,6 @@ footer .footer-text span {
 
   #offers-section p.subtitle-text {
     width: 300px;
-  }
-
-  #offers-section .container {
-    flex-direction: column;
   }
 
   .hashtag p.heading {
@@ -532,12 +532,10 @@ footer .footer-text span {
   }
 
   .itens .item-icon img {
-    width: 30px;
     height: 30px;
   }
 
   .itens.second .item-icon img {
-    width: 32px;
     height: 32px;
   }
 
@@ -572,8 +570,7 @@ footer .footer-text span {
   }
 
   .offer .content {
-    margin-top: 14px;
-    margin-left: 16px;
+    margin: 14px 0px 0px 16px;
   }
 
   .offer.first .text {
@@ -592,12 +589,10 @@ footer .footer-text span {
   }
 
   .opening-hours .item-icon {
-    width: 68px;
     height: 68px;
   }
 
   .opening-hours .item-icon img {
-    width: 40px;
     height: 40px;
   }
 
@@ -772,7 +767,8 @@ footer .footer-text span {
 
 @media (min-width: 1024px) {
   header,
-  section {
+  section,
+  footer {
     padding-inline: 48px;
   }
 
@@ -801,7 +797,8 @@ footer .footer-text span {
     display: none;
   }
 
-  header .contact {
+  header .contact,
+  footer .contact {
     margin-right: 60px;
   }
 
@@ -835,7 +832,7 @@ footer .footer-text span {
   }
 
   .card-itens {
-    width: 894px;
+    width: 898px;
     padding: 24px 18px;
   }
 
@@ -846,6 +843,10 @@ footer .footer-text span {
     margin: 0px 16px;
     border-top: none;
     border-left: 1px solid rgba(73, 46, 21, 0.149);
+  }
+
+  .card-itens .content p {
+    width: 170px;
   }
 
   #offers-section h3 {
@@ -925,7 +926,7 @@ footer .footer-text span {
   footer .container {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
   }
 
   footer .container .line,
@@ -936,7 +937,8 @@ footer .footer-text span {
   footer .content {
     display: flex;
     flex-direction: row-reverse;
-    column-gap: 150px;
+    /* column-gap: 150px; */
+    column-gap: 80px;
   }
 
   footer nav ul {
@@ -947,12 +949,9 @@ footer .footer-text span {
 
 @media (min-width: 1440px) {
   header,
-  section {
+  section,
+  footer {
     padding-inline: 215px;
-  }
-
-  header .contact {
-    margin-right: 60px;
   }
 
   .contact .content {
@@ -960,11 +959,7 @@ footer .footer-text span {
   }
 
   .card-itens {
-    width: 892px;
     padding: 16px 12px;
-    margin-top: -51px;
-
-    flex-direction: row;
   }
 
   .card-itens hr {
@@ -1034,12 +1029,6 @@ footer .footer-text span {
 
   #address-section p {
     margin-bottom: 26px;
-  }
-
-  footer .container {
-    display: flex;
-    column-gap: 336px;
-    justify-content: space-around;
   }
 
   footer .container .line,
@@ -1245,5 +1234,9 @@ footer .footer-text span {
   footer {
     padding-top: 28px;
     padding-bottom: 12px;
+  }
+
+  footer .contact {
+    margin-right: 0px;
   }
 }
