@@ -13,11 +13,6 @@
       rel="stylesheet"
     />
 
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons+Round"
-      rel="stylesheet"
-    />
-
     <link rel="stylesheet" href="./style.css" />
   </head>
 
@@ -27,16 +22,16 @@
 
       <div class="container">
         <nav class="menu">
-          <ul class="">
-            <li class="title active"><a href="">Home</a></li>
-            <li class="title"><a href="">Promoção</a></li>
+          <ul class="" id="menuList">
+            <li class="title active"><a href="#hero-section">Home</a></li>
+            <li class="title"><a href="#offers-section">Promoção</a></li>
             <li class="title"><a href="">Cardápio</a></li>
             <li class="title"><a href="">Comentário</a></li>
-            <li class="title"><a href="">Contato</a></li>
+            <li class="title"><a href="#address-section">Contato</a></li>
           </ul>
 
-          <div class="menu-icon">
-            <img src="./assets/icons/menu.svg" alt="" />
+          <div class="menu-icon" id="menuButton">
+            <img src="./assets/icons/menu.svg" alt="" id="menuIcon" />
           </div>
         </nav>
 
@@ -82,7 +77,7 @@
         <a href="">Comprar Agora</a>
       </section>
 
-      <div class="card-itens">
+      <div class="card-itens" id="about-card">
         <div class="itens">
           <div class="item-icon">
             <img src="./assets/icons/burger.svg" alt="" />
@@ -224,11 +219,11 @@
           <div class="line"></div>
 
           <nav>
-            <ul>
-              <li class="title active"><a href="">Home</a></li>
+            <ul id="footerList">
+              <li class="title active"><a href="#hero-section">Home</a></li>
               <li class="title"><a href="">Localização</a></li>
               <li class="title"><a href="">Cardápio</a></li>
-              <li class="title"><a href="">Sobre</a></li>
+              <li class="title"><a href="#about-card">Sobre</a></li>
             </ul>
           </nav>
         </div>
@@ -241,5 +236,7 @@
         <span> Todos os direitos reservados.</span>
       </div>
     </footer>
+
+    <script src="./main.js"></script>
   </body>
 </html>

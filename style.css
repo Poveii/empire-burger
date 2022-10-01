@@ -12,11 +12,44 @@ header {
 
   background-color: rgba(59, 32, 11, 0.05);
   backdrop-filter: blur(5px);
+  z-index: 1;
+}
+
+.menu {
+  display: flex;
 }
 
 .menu ul {
   display: none;
-  column-gap: 1rem;
+  gap: 1rem;
+}
+
+.menu ul .title {
+  font-weight: 700;
+  font-size: 1.375rem;
+  line-height: 1.6875rem;
+  text-align: center;
+}
+
+.menu ul .title a {
+  color: #635352;
+}
+
+.menu ul .title.active a {
+  color: #34201f;
+}
+
+.menu ul.show {
+  background-color: #fae2cb;
+
+  width: 100vw;
+  height: 100vh;
+
+  position: fixed;
+  inset: 0;
+
+  display: grid;
+  place-content: center;
 }
 
 .menu .menu-icon {
@@ -25,6 +58,9 @@ header {
 
   background: rgba(29, 6, 5, 0.15);
   border-radius: 3px;
+  user-select: none;
+  cursor: pointer;
+  z-index: 1;
 }
 
 .menu-icon img {
@@ -45,7 +81,7 @@ header .contact {
   column-gap: 13px;
 }
 
-.contact hr {
+header .contact hr {
   border-left: 1px solid #b50b04;
 }
 
@@ -483,6 +519,11 @@ footer .footer-text span {
     height: 56px;
   }
 
+  .menu ul .title {
+    font-size: 1.25rem;
+    line-height: 1.5625rem;
+  }
+
   #hero-section {
     padding-top: 94px;
   }
@@ -780,17 +821,9 @@ footer .footer-text span {
     display: flex;
   }
 
-  .menu ul .title a {
+  .menu ul .title {
     font-size: 1.125rem;
     line-height: 1.5625rem;
-
-    color: #635352;
-  }
-
-  .menu ul .title.active a {
-    font-weight: 700;
-
-    color: #34201f;
   }
 
   .menu .menu-icon {
@@ -1053,24 +1086,6 @@ footer .footer-text span {
   section,
   footer {
     padding-inline: 375px;
-  }
-
-  .menu ul {
-    display: flex;
-    column-gap: 1rem;
-  }
-
-  .menu ul .title a {
-    font-size: 1.125rem;
-    line-height: 1.5625rem;
-
-    color: #635352;
-  }
-
-  .menu ul .title.active a {
-    font-weight: 700;
-
-    color: #34201f;
   }
 
   .menu .menu-icon {
